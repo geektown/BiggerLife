@@ -5,6 +5,8 @@
 'use strict';
 
 var React = require('react-native');
+var Swiper = require('react-native-swiper')
+
 var {
   AppRegistry,
   StyleSheet,
@@ -12,41 +14,50 @@ var {
   View,
 } = React;
 
-var AwesomeProject = React.createClass({
+var BiggerLife = React.createClass({
   render: function() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
+      <Swiper style={styles.wrapper} showsButtons={true}>
+        <View style={styles.slide1}>
+          <Text style={styles.text}>逼格BiggerLife生活</Text>
+        </View>
+        <View style={styles.slide2}>
+          <Text style={styles.text}>超越自我的目标管理</Text>
+        </View>
+        <View style={styles.slide3}>
+          <Text style={styles.text}>方便实用</Text>
+        </View>
+      </Swiper>
+    )
   }
 });
 
 var styles = StyleSheet.create({
-  container: {
+  wrapper: {
+  },
+  slide1: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#9DD6EB',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  slide2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#97CAE5',
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  slide3: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#92BBD9',
   },
-});
+  text: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
+  }
+})
 
-AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
+AppRegistry.registerComponent('BiggerLife', () => BiggerLife);

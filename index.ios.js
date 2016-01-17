@@ -12,7 +12,7 @@ var {
   View,
 } = React;
 
-var AwesomeProject = React.createClass({
+var BiggerLife = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ var styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('AwesomeProject', () => AwesomeProject);
+AppRegistry.registerComponent('BiggerLife', () => BiggerLife);
